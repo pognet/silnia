@@ -1,6 +1,8 @@
 #include <stdio.h>
 #include <stdbool.h>
 
+#define TEST
+
 long licz_silnie(int podstawa) {
 //    if (podstawa == 0) {
 //        return 1;
@@ -30,20 +32,28 @@ bool test_licz_silnie() {
 }
 
 int main() {
-    test_licz_silnie();
-//   long podstawa;
-//   long wynik;
-//
-//   printf("Podaj podstawę silni w przedziale 0 do 15: \n");
-//   scanf("%ld", &podstawa);
-//
-//   if(podstawa >= 0 && podstawa <= 15){
-//       wynik = licz_silnie(podstawa);
-//       printf("silnia : %ld", wynik);
-//
-//   }
-//   else {
-//       printf("Podałeś liczbę z poza zakresu! \n");
-//   }
-//    return 0;
+
+#ifndef TEST
+
+    long podstawa;
+    long wynik;
+
+    printf("Podaj podstawę silni w przedziale 0 do 15: \n");
+    scanf("%ld", &podstawa);
+
+    if(podstawa >= 0 && podstawa <= 15){
+        wynik = licz_silnie(podstawa);
+        printf("silnia : %ld", wynik);
+
+    }
+    else {
+        printf("Podałeś liczbę z poza zakresu! \n");
+    }
+    return 0;
+
+#else
+
+   test_licz_silnie();
+
+#endif
 }
