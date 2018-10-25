@@ -1,0 +1,1 @@
+/usr/bin/gcc -g   CMakeFiles/21_silnia.dir/main.c.o  -o 21_silnia 
