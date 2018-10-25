@@ -9,7 +9,7 @@ long licz_silnie(int podstawa) {
         long licznik;
         long silnia=1;
 
-        for (licznik = 1; licznik <= podstawa; ++licznik) {
+        for (licznik = 2; licznik <= podstawa; ++licznik) {
             silnia *= licznik;
         }
         return silnia;
@@ -18,9 +18,11 @@ long licz_silnie(int podstawa) {
 
 bool test_licz_silnie() {
     if (licz_silnie(0) == 1)
-        if (licz_silnie(1) == 1) {
-        printf("test_licz_silnie() działa");
-        return true;
+        if (licz_silnie(1) == 1)
+            if (licz_silnie(2) == 2)
+                if (licz_silnie(5) == 120){
+                printf("test_licz_silnie() działa");
+                return true;
     } else {
         printf("test_licz_silnie nie działa!");
         return false;
